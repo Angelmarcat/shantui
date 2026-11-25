@@ -1,0 +1,9 @@
+.hero-section {
+    align-items: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("../img/home/hero/Shantui-home-Imagen1.webp") center / cover no-repeat;
+    color: #fff;
+    display: flex;
+    min-height: calc(100vh - 82px);
+}
