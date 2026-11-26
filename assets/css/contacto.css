@@ -212,6 +212,10 @@
         padding: 2.75rem 0 3.5rem;
     }
 
+    .contact-form-section > .container > .row {
+        --bs-gutter-x: 0;
+    }
+
     .contact-form-section h2 {
         margin-bottom: 2rem;
         font-size: 2rem;
