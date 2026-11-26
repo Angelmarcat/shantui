@@ -1,0 +1,152 @@
+.site-footer {
+    background: #211f20;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.site-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    color: #eb6608;
+}
+
+.site-footer__top {
+    min-height: 136px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.site-footer__links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.site-footer__social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.site-footer__social a,
+.site-footer__social img {
+    display: block;
+}
+
+.site-footer__divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.site-footer__bottom {
+    min-height: 124px;
+    display: flex;
+    align-items: center;
+    gap: clamp(3rem, 12vw, 12rem);
+}
+
+.site-footer__brands {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.site-footer__shantui {
+    width: 175px;
+    height: auto;
+}
+
+.site-footer__gip {
+    width: 177px;
+    height: auto;
+}
+
+.site-footer__brand-divider {
+    width: 1px;
+    height: 62px;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.site-footer__copyright {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+@media (max-width: 767.98px) {
+    .site-footer__top,
+    .site-footer__bottom {
+        min-height: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .site-footer__top {
+        padding: 1.75rem 0;
+        gap: 1.5rem;
+    }
+
+    .site-footer__links {
+        gap: 0.65rem;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    .site-footer__social {
+        gap: 0.75rem;
+    }
+
+    .site-footer__social img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .site-footer__bottom {
+        padding: 1.75rem 0;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .site-footer__brands {
+        gap: 1.25rem;
+    }
+
+    .site-footer__shantui {
+        width: 135px;
+    }
+
+    .site-footer__gip {
+        width: 130px;
+    }
+
+    .site-footer__brand-divider {
+        height: 50px;
+    }
+
+    .site-footer__copyright {
+        max-width: 330px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 374px) {
+    .site-footer__links {
+        font-size: 0.9rem;
+    }
+
+    .site-footer__shantui {
+        width: 120px;
+    }
+
+    .site-footer__gip {
+        width: 115px;
+    }
+}

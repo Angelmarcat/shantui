@@ -1,0 +1,425 @@
+.about-hero {
+    min-height: clamp(290px, 21.35vw, 410px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    background-image: url('../img/nosotros/Shantui-Nosotros-banner.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(15, 19, 23, 0.38) 0%, rgba(15, 19, 23, 0) 48%);
+    pointer-events: none;
+}
+
+.about-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.who-we-are {
+    padding: clamp(3.5rem, 6vw, 6.5rem) 0;
+    overflow: hidden;
+    background: #fff;
+}
+
+.who-we-are__grid {
+    position: relative;
+}
+
+.who-we-are__media {
+    position: relative;
+    z-index: 2;
+    aspect-ratio: 1.23 / 1;
+    overflow: hidden;
+}
+
+.who-we-are__media img {
+    display: block;
+    width: 262.4%;
+    max-width: none;
+    height: auto;
+    transform: translate(-1.72%, -6.36%);
+}
+
+.who-we-are__column {
+    position: relative;
+    z-index: 1;
+}
+
+.who-we-are__content {
+    min-height: 345px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: clamp(2.5rem, 4vw, 4.5rem) clamp(2rem, 5vw, 5.5rem);
+    color: #fff;
+    background: #f66a1d;
+}
+
+.who-we-are__content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    width: 140px;
+    z-index: -1;
+    background: #f66a1d;
+}
+
+.who-we-are__content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 19%;
+    background: linear-gradient(96deg, rgba(255, 255, 255, 0.04) 0 34%, rgba(255, 150, 31, 0.78) 35% 70%, #ff981f 71% 100%);
+    clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+    pointer-events: none;
+}
+
+.who-we-are__content h2,
+.who-we-are__content p {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+}
+
+.who-we-are__content h2 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.who-we-are__content p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.35;
+    text-align: justify;
+}
+
+.what-we-offer {
+    padding: 0 1rem clamp(3.5rem, 5vw, 5.5rem);
+    background: #fff;
+}
+
+.what-we-offer .row {
+    min-height: clamp(410px, 33vw, 520px);
+    background: #f1f1f1;
+}
+
+.what-we-offer__column {
+    display: flex;
+    align-items: center;
+}
+
+.what-we-offer__content {
+    width: 100%;
+    padding: clamp(3rem, 7vw, 7.5rem) clamp(2rem, 7vw, 8rem);
+}
+
+.what-we-offer__content h2 {
+    margin: 0 0 1.75rem;
+    color: #111;
+    font-size: clamp(1.65rem, 2.15vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.what-we-offer__content p {
+    max-width: 760px;
+    margin: 0;
+    color: #111;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.what-we-offer__media {
+    min-height: 410px;
+}
+
+.what-we-offer__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.service-quality {
+    padding: 0 0 clamp(3.5rem, 6vw, 6rem);
+    overflow: hidden;
+    background: #fff;
+}
+
+.service-quality__grid {
+    position: relative;
+}
+
+.service-quality__media {
+    position: relative;
+    z-index: 2;
+}
+
+.service-quality__media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.23 / 1;
+    object-fit: cover;
+}
+
+.service-quality__column {
+    position: relative;
+    z-index: 1;
+}
+
+.service-quality__content {
+    min-height: clamp(400px, 34vw, 520px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: clamp(3rem, 5vw, 5.5rem) clamp(2.5rem, 6vw, 6.5rem);
+    background: #f1f1f1;
+}
+
+.service-quality__content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    width: 260px;
+    z-index: -1;
+    background: #f1f1f1;
+}
+
+.service-quality__content h2 {
+    margin: 0 0 1.75rem;
+    color: #111;
+    font-size: clamp(1.65rem, 2.15vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.service-quality__content p {
+    max-width: 760px;
+    margin: 0;
+    color: #111;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.future-ahead {
+    padding: 0 1rem clamp(3.5rem, 5vw, 5.5rem);
+    background: #fff;
+}
+
+.future-ahead .row {
+    min-height: clamp(485px, 34vw, 545px);
+    background: #f1f1f1;
+}
+
+.future-ahead__column {
+    display: flex;
+    align-items: center;
+}
+
+.future-ahead__content {
+    width: 100%;
+    padding: clamp(3rem, 5vw, 5rem) clamp(2rem, 7vw, 8rem);
+}
+
+.future-ahead__content h2 {
+    margin: 0 0 1.75rem;
+    color: #111;
+    font-size: clamp(1.65rem, 2.15vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.future-ahead__content p {
+    max-width: 780px;
+    margin: 0;
+    color: #111;
+    font-size: 1rem;
+    line-height: 1.35;
+    text-align: justify;
+}
+
+.future-ahead__content p + p {
+    margin-top: 1.25rem;
+}
+
+.future-ahead__media {
+    min-height: 485px;
+}
+
+.future-ahead__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 767.98px) {
+    .about-hero {
+        min-height: 420px;
+        align-items: flex-end;
+        padding-bottom: 2.5rem;
+        background-position: 67% center;
+    }
+
+    .about-hero::before {
+        background: linear-gradient(0deg, rgba(15, 19, 23, 0.72) 0%, rgba(15, 19, 23, 0.08) 65%);
+    }
+
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .who-we-are {
+        padding: 2.5rem 0;
+    }
+
+    .who-we-are__media img {
+        width: 262.4%;
+    }
+
+    .who-we-are__content {
+        min-height: 0;
+        padding: 2.25rem 1.5rem 2.5rem;
+    }
+
+    .who-we-are__content::before {
+        display: none;
+    }
+
+    .who-we-are__content::after {
+        width: 28%;
+        opacity: 0.45;
+    }
+
+    .who-we-are__content h2 {
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .who-we-are__content p {
+        font-size: 1rem;
+        line-height: 1.45;
+        text-align: left;
+    }
+
+    .what-we-offer {
+        padding: 0 0 2.5rem;
+    }
+
+    .what-we-offer .row {
+        min-height: 0;
+    }
+
+    .what-we-offer__content {
+        padding: 2.75rem 1.5rem;
+    }
+
+    .what-we-offer__content h2 {
+        margin-bottom: 1.25rem;
+        font-size: 1.6rem;
+    }
+
+    .what-we-offer__content p {
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    .what-we-offer__media {
+        min-height: 0;
+    }
+
+    .what-we-offer__media img {
+        height: auto;
+        aspect-ratio: 1.34 / 1;
+    }
+
+    .service-quality {
+        padding-bottom: 2.5rem;
+    }
+
+    .service-quality__content {
+        min-height: 0;
+        padding: 2.75rem 1.5rem;
+    }
+
+    .service-quality__content::before {
+        display: none;
+    }
+
+    .service-quality__content h2 {
+        margin-bottom: 1.25rem;
+        font-size: 1.6rem;
+    }
+
+    .service-quality__content p {
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    .future-ahead {
+        padding: 0 0 2.5rem;
+    }
+
+    .future-ahead .row {
+        min-height: 0;
+    }
+
+    .future-ahead__content {
+        padding: 2.75rem 1.5rem;
+    }
+
+    .future-ahead__content h2 {
+        margin-bottom: 1.25rem;
+        font-size: 1.6rem;
+    }
+
+    .future-ahead__content p {
+        font-size: 1rem;
+        line-height: 1.45;
+        text-align: left;
+    }
+
+    .future-ahead__media {
+        min-height: 0;
+    }
+
+    .future-ahead__media img {
+        height: auto;
+        aspect-ratio: 1.34 / 1;
+    }
+}

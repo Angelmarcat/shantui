@@ -13,6 +13,7 @@
     <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/navbar.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
     <?php if (isset($pageStylesheet)): ?>
         <link href="<?= htmlspecialchars($pageStylesheet, ENT_QUOTES, 'UTF-8') ?>" rel="stylesheet">
     <?php endif; ?>
