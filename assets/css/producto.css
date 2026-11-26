@@ -1,0 +1,262 @@
+.detail-hero {
+    --hero-height: clamp(390px, 29vw, 558px);
+    --overlap: clamp(100px, 10vw, 190px);
+    position: relative;
+    background-color: #050505;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+
+.detail-hero__row {
+    min-height: var(--hero-height);
+}
+
+.detail-hero__content {
+    position: relative;
+    z-index: 2;
+    padding-block: 3rem;
+}
+
+.detail-hero__content h1 {
+    margin: 0 0 1.75rem;
+    color: #ff7a1b;
+    font-size: clamp(2.8rem, 5vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+.detail-hero__category {
+    margin: 0;
+    font-size: clamp(1rem, 1.3vw, 1.4rem);
+    font-weight: 700;
+}
+
+.detail-hero__specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin: 0 0 2rem;
+    padding: 0;
+    list-style: none;
+    font-size: clamp(0.7rem, 0.85vw, 0.9rem);
+    line-height: 1.2;
+}
+
+.detail-hero__specs li::before { content: '•'; }
+.detail-hero__specs span { display: block; padding-left: 0.6rem; }
+
+.detail-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.detail-hero__actions a,
+.detail-hero__actions button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.85rem;
+    border: 0;
+    border-radius: 999px;
+    background: #ff7a1b;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.detail-hero__actions button:disabled { cursor: not-allowed; }
+
+.detail-hero__actions img {
+    display: block;
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+.detail-hero__media {
+    position: relative;
+    z-index: 1;
+    align-self: end;
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(-1 * var(--overlap));
+}
+
+.detail-hero__media img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: calc(var(--hero-height) + var(--overlap) - 2rem);
+    object-fit: contain;
+}
+
+.detail-hero__extension {
+    position: relative;
+    height: calc(clamp(100px, 10vw, 190px) + 2rem);
+    background: #fff;
+}
+
+.detail-hero__extension span {
+    position: absolute;
+    top: 38%;
+    right: 0;
+    width: 55%;
+    height: clamp(18px, 2vw, 36px);
+    background: #ff7a1b;
+}
+
+.product-features {
+    padding: 2rem 0 2.5rem;
+    background: #f4f4f4;
+    color: #000;
+}
+
+.product-features h2 {
+    margin: 0 0 2.5rem;
+    font-size: var(--font-size-large);
+    font-weight: 700;
+}
+
+.product-features__content {
+    max-width: 780px;
+}
+
+.product-features__item {
+    margin-bottom: 1rem;
+    padding-left: 0.9rem;
+}
+
+.product-features__item:last-child {
+    margin-bottom: 0;
+}
+
+.product-features__item h3 {
+    position: relative;
+    margin: 0 0 1rem;
+    font-size: var(--font-size-base);
+    font-weight: 700;
+}
+
+.product-features__item h3::before {
+    position: absolute;
+    left: -0.8rem;
+    color: #ff7a1b;
+    content: '•';
+}
+
+.product-features__item p {
+    margin: 0;
+    font-size: var(--font-size-base);
+    line-height: 1.2;
+}
+
+.product-parameters {
+    padding: 2rem 0 3rem;
+    background: #fff;
+    color: #000;
+}
+
+.product-parameters h2 {
+    margin: 0 0 1.5rem;
+    font-size: var(--font-size-large);
+    font-weight: 700;
+}
+
+.product-parameters__table-wrap {
+    max-width: 780px;
+    overflow-x: auto;
+}
+
+.product-parameters__table {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: var(--font-size-small);
+    line-height: 1.15;
+}
+
+.product-parameters__table th,
+.product-parameters__table td {
+    border: 1px solid #000;
+    padding: 0.3rem 0.5rem;
+}
+
+.product-parameters__table thead {
+    background: #f2f2f2;
+}
+
+.product-parameters__table tbody th {
+    width: 69%;
+    font-weight: 400;
+}
+
+.product-quote {
+    background: #24201f url('../img/detalle-producto/Shantui-SE220LC-imageninferior.webp') center / cover no-repeat;
+    color: #fff;
+}
+
+.product-quote__row {
+    min-height: clamp(300px, 29vw, 558px);
+}
+
+.product-quote__content {
+    padding-block: 3rem;
+    text-align: center;
+}
+
+.product-quote__content h2 {
+    margin: 0 0 2rem;
+    font-size: clamp(1.6rem, 2.3vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.product-quote__button {
+    display: inline-block;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    background: #ff7a1b;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.product-quote__button:hover,
+.product-quote__button:focus-visible {
+    background: #d95400;
+    color: #fff;
+}
+
+@media (max-width: 767.98px) {
+    .product-quote {
+        background-position: 65% center;
+    }
+
+    .product-quote__row {
+        min-height: 300px;
+    }
+
+    .detail-hero { --hero-height: auto; --overlap: 65px; }
+    .detail-hero__row {
+        min-height: 0;
+    }
+
+    .detail-hero__content {
+        padding-top: 2.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .detail-hero__media img {
+        max-height: 300px;
+    }
+
+    .detail-hero__extension { height: 100px; }
+}

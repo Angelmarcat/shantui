@@ -1,0 +1,495 @@
+.solutions-hero {
+    min-height: clamp(290px, 31.7vw, 610px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    background-image: url('../img/soluciones/Shantui-soluciones-banner.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.solutions-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(19, 24, 28, 0.25) 0%, rgba(19, 24, 28, 0) 48%);
+    pointer-events: none;
+}
+
+.solutions-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+.solutions-hero h1 {
+    margin: 0;
+    color: #fff;
+    font-size: var(--font-size-hero);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.mining-solution {
+    padding: 1rem;
+    background: #fff;
+}
+
+.mining-solution__container {
+    padding: 0;
+}
+
+.mining-solution__panel {
+    min-height: clamp(420px, 35.85vw, 650px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/soluciones/Shantui-soluciones-mineria.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mining-solution__content {
+    width: min(58%, 920px);
+    padding: clamp(2.5rem, 6vw, 7rem);
+    color: #fff;
+}
+
+.mining-solution h2 {
+    margin: 0 0 clamp(2rem, 3vw, 3.5rem);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.mining-solution__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.mining-solution__categories span {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    font-size: clamp(0.9rem, 1.25vw, 1.25rem);
+    line-height: 1.1;
+}
+
+.mining-solution__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+    color: #fff;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mining-solution__link img {
+    width: clamp(44px, 4vw, 58px);
+    height: auto;
+    transition: transform 180ms ease;
+}
+
+.mining-solution__link:hover img,
+.mining-solution__link:focus-visible img {
+    transform: translateX(4px);
+}
+
+.dual-solutions {
+    padding: 0 1rem 1rem;
+    background: #fff;
+}
+
+.dual-solutions__container {
+    padding: 0;
+}
+
+.dual-solutions__grid {
+    gap: clamp(1rem, 3.5vw, 4.5rem);
+    flex-wrap: nowrap;
+}
+
+.road-solution,
+.forest-solution {
+    flex: 1 1 0;
+    width: auto;
+    max-width: none;
+    min-height: clamp(480px, 35vw, 650px);
+}
+
+.road-solution {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background-image: url('../img/soluciones/Shantui-soluciones-Construccionymantenimientodecaminos.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.road-solution__content {
+    width: 100%;
+    padding: clamp(2.25rem, 4vw, 5rem);
+}
+
+.road-solution h2,
+.forest-solution h2 {
+    margin: 0 0 clamp(2rem, 3vw, 3.5rem);
+    font-size: clamp(1.8rem, 2.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.dual-solutions__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.dual-solutions__categories span {
+    display: inline-block;
+    padding: 0.12rem 0.45rem;
+    border: 1px solid currentColor;
+    font-size: clamp(0.85rem, 1.05vw, 1.1rem);
+    line-height: 1.1;
+}
+
+.dual-solutions__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: inherit;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.dual-solutions__link img {
+    width: 44px;
+    height: auto;
+    transition: transform 180ms ease;
+}
+
+.dual-solutions__link:hover img,
+.dual-solutions__link:focus-visible img {
+    transform: translateX(4px);
+}
+
+.forest-solution {
+    display: grid;
+    grid-template-rows: 48% 52%;
+    border: 1px solid #222;
+    color: #111820;
+}
+
+.forest-solution__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: clamp(2rem, 3vw, 3.5rem);
+}
+
+.forest-solution__content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.forest-solution__content .dual-solutions__categories {
+    margin-bottom: auto;
+}
+
+.forest-solution__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.other-services {
+    padding: clamp(3rem, 5vw, 5.5rem) 0;
+    background: #fff;
+}
+
+.service-card {
+    height: 100%;
+    min-height: 310px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2.7 / 1;
+    object-fit: cover;
+}
+
+.service-card__content {
+    min-height: 183px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 1rem 1rem;
+    border: 1px solid #222;
+    border-top: 0;
+    color: #111820;
+}
+
+.service-card h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(1rem, 1.15vw, 1.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.service-card__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 1.25rem;
+}
+
+.service-card__categories span {
+    padding: 0.08rem 0.3rem;
+    border: 1px solid #222;
+    font-size: var(--font-size-xs);
+    line-height: 1.1;
+}
+
+.service-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: auto;
+    align-self: flex-end;
+    color: #111820;
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.service-card__link img {
+    width: 24px;
+    height: auto;
+    transition: transform 180ms ease;
+}
+
+.service-card__link:hover img,
+.service-card__link:focus-visible img {
+    transform: translateX(3px);
+}
+
+/* Scale the desktop composition to the Bootstrap container, not the viewport. */
+@media (min-width: 992px) {
+    .dual-solutions__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3.8%;
+    }
+
+    .road-solution,
+    .forest-solution {
+        container-type: inline-size;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .road-solution {
+        aspect-ratio: 872 / 530;
+    }
+
+    .road-solution__content {
+        padding: 0 5.3%;
+    }
+
+    .road-solution h2,
+    .forest-solution h2 {
+        font-size: 3.67cqw;
+        line-height: 1.18;
+    }
+
+    .road-solution h2 {
+        margin-bottom: 6.9cqw;
+    }
+
+    .dual-solutions__categories {
+        gap: 1.35cqw 0.65cqw;
+        margin-bottom: 8.2cqw;
+    }
+
+    .dual-solutions__categories span {
+        padding: 0.08cqw 0.5cqw;
+        font-size: 1.9cqw;
+        line-height: 1.15;
+    }
+
+    .road-solution .dual-solutions__categories {
+        max-width: 70cqw;
+    }
+
+    .dual-solutions__link {
+        gap: 1.35cqw;
+        font-size: 1.55cqw;
+    }
+
+    .dual-solutions__link img {
+        width: 4.7cqw;
+    }
+
+    .forest-solution {
+        grid-template-rows: minmax(0, 48%) minmax(0, 52%);
+    }
+
+    .forest-solution__content {
+        min-height: 0;
+        padding: 5.5cqw 3.7cqw 2.4cqw;
+    }
+
+    .forest-solution__content h2 {
+        margin-bottom: 2.3cqw;
+    }
+
+    .forest-solution__image {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .solutions-hero {
+        min-height: 420px;
+        align-items: flex-end;
+        padding-bottom: 2.5rem;
+        background-position: 64% center;
+    }
+
+    .solutions-hero::before {
+        background: linear-gradient(0deg, rgba(5, 8, 11, 0.74) 0%, rgba(5, 8, 11, 0.05) 68%);
+    }
+
+    .solutions-hero h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .mining-solution {
+        padding: 1rem 0;
+    }
+
+    .mining-solution__panel {
+        min-height: 520px;
+        align-items: flex-end;
+        background-position: 67% center;
+    }
+
+    .mining-solution__panel::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(8, 10, 12, 0.88) 0%, rgba(8, 10, 12, 0.18) 75%);
+    }
+
+    .mining-solution__content {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        padding: 2rem 1.25rem;
+    }
+
+    .mining-solution h2 {
+        margin-bottom: 1.5rem;
+        font-size: var(--font-size-3xl);
+    }
+
+    .mining-solution__categories {
+        gap: 0.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .mining-solution__categories span {
+        font-size: var(--font-size-small);
+    }
+
+    .dual-solutions {
+        padding: 0 0 1rem;
+    }
+
+    .dual-solutions__grid {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .road-solution,
+    .forest-solution {
+        flex: 0 0 100%;
+        width: 100%;
+        min-height: 520px;
+    }
+
+    .road-solution {
+        align-items: flex-end;
+        background-position: 64% center;
+    }
+
+    .road-solution::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(8, 10, 12, 0.88) 0%, rgba(8, 10, 12, 0.12) 75%);
+    }
+
+    .road-solution__content {
+        position: relative;
+        z-index: 1;
+        padding: 2rem 1.25rem;
+    }
+
+    .road-solution h2,
+    .forest-solution h2 {
+        margin-bottom: 1.5rem;
+        font-size: var(--font-size-xl);
+    }
+
+    .dual-solutions__categories {
+        gap: 0.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .dual-solutions__categories span {
+        font-size: var(--font-size-small);
+    }
+
+    .forest-solution {
+        grid-template-rows: auto 280px;
+        min-height: 0;
+    }
+
+    .forest-solution__content {
+        min-height: 300px;
+        padding: 2rem 1.25rem;
+    }
+
+    .other-services {
+        padding: 3rem 0;
+    }
+
+    .service-card__image {
+        aspect-ratio: 2.25 / 1;
+    }
+}

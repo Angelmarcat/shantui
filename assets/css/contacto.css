@@ -27,7 +27,7 @@
 .contact-hero h1 {
     margin: 0;
     color: #fff;
-    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    font-size: var(--font-size-hero);
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
@@ -42,7 +42,7 @@
 .contact-form-section h2 {
     margin: 0 0 clamp(2.5rem, 5vw, 5rem);
     color: #17375e;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: var(--font-size-section);
     font-weight: 700;
     line-height: 1.1;
     text-align: center;
@@ -60,7 +60,7 @@
 .contact-form legend {
     display: block;
     margin-bottom: 0.35rem;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     line-height: 1.2;
 }
 
@@ -128,7 +128,7 @@
     border-radius: 999px;
     color: #fff;
     background: #ff7419;
-    font-size: 1.2rem;
+    font-size: var(--font-size-md);
     font-weight: 700;
     line-height: 1.2;
 }
@@ -154,7 +154,7 @@
     margin: 0 0 1.25rem;
     padding-bottom: 0.35rem;
     border-bottom: 3px solid #ff7419;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: var(--font-size-section);
     font-weight: 700;
     line-height: 1.1;
 }
@@ -192,6 +192,123 @@
     color: #ff7419;
 }
 
+.ratings-section {
+    padding: clamp(3.5rem, 6vw, 6rem) 0;
+    overflow: hidden;
+    background: #f7f7f7;
+}
+
+.ratings-section h2 {
+    margin: 0 0 clamp(2rem, 4vw, 3.5rem);
+    color: #17375e;
+    font-size: var(--font-size-section);
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ratings-track {
+    display: flex;
+    align-items: center;
+    gap: clamp(2rem, 4vw, 4.5rem);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding: 0 max(1rem, calc((100vw - 760px) / 2)) 1.5rem;
+    scroll-behavior: smooth;
+    scroll-padding-inline: max(1rem, calc((100vw - 760px) / 2));
+    scroll-snap-type: inline mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    user-select: none;
+}
+
+.ratings-track:focus-visible {
+    outline: 3px solid rgba(255, 116, 25, 0.55);
+    outline-offset: -3px;
+}
+
+.ratings-track::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.ratings-track.is-dragging {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+    cursor: grabbing;
+}
+
+.ratings-track.is-loop-jumping {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.ratings-card {
+    flex: 0 0 min(760px, 72vw);
+    margin: 0;
+    scroll-snap-align: center;
+}
+
+.ratings-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.28));
+    pointer-events: none;
+    user-select: none;
+}
+
+.showroom-section {
+    padding: clamp(3rem, 5vw, 5rem) 0;
+    background: #fff;
+}
+
+.google-map iframe {
+    display: block;
+    width: 100%;
+    height: clamp(300px, 35vw, 480px);
+    border: 0;
+}
+
+.showroom-section h2 {
+    margin: 0 0 clamp(2.5rem, 4vw, 4rem);
+    color: #111820;
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.showroom-section__details {
+    --bs-gutter-x: clamp(2rem, 4vw, 4rem);
+    --bs-gutter-y: 1.5rem;
+}
+
+.showroom-section__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+    line-height: 1.25;
+}
+
+.showroom-section__item strong {
+    flex: 0 0 auto;
+    color: #ff7419;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.showroom-section__item address,
+.showroom-section__item p {
+    margin: 0;
+    color: #111820;
+    font-style: normal;
+}
+
 @media (max-width: 767.98px) {
     .contact-hero {
         min-height: 420px;
@@ -205,7 +322,7 @@
     }
 
     .contact-hero h1 {
-        font-size: 2.5rem;
+        font-size: var(--font-size-3xl);
     }
 
     .contact-form-section {
@@ -218,7 +335,7 @@
 
     .contact-form-section h2 {
         margin-bottom: 2rem;
-        font-size: 2rem;
+        font-size: var(--font-size-2xl);
     }
 
     .contact-form {
@@ -235,10 +352,43 @@
     }
 
     .contact-details__body h3 {
-        font-size: 2rem;
+        font-size: var(--font-size-2xl);
     }
 
     .contact-details__list li {
-        font-size: 1.2rem;
+        font-size: var(--font-size-md);
+    }
+
+    .ratings-section {
+        padding: 3rem 0;
+    }
+
+    .ratings-section h2 {
+        margin-bottom: 2rem;
+        font-size: var(--font-size-2xl);
+    }
+
+    .ratings-track {
+        gap: 1rem;
+        padding-inline: 1rem;
+        scroll-padding-inline: 1rem;
+    }
+
+    .ratings-card {
+        flex-basis: calc(100vw - 2.5rem);
+    }
+
+    .showroom-section {
+        padding: 2.75rem 0 3rem;
+    }
+
+    .showroom-section h2 {
+        margin-bottom: 2rem;
+        font-size: var(--font-size-xl);
+    }
+
+    .showroom-section__item {
+        gap: 0.5rem;
+        font-size: var(--font-size-base);
     }
 }

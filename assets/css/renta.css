@@ -1,0 +1,484 @@
+.rental-hero {
+    min-height: clamp(290px, 21.35vw, 410px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    background-image: url('../img/renta/Shantui-Renta-banner.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.rental-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(7, 10, 13, 0.5) 0%, rgba(7, 10, 13, 0) 48%);
+    pointer-events: none;
+}
+
+.rental-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+.rental-hero h1 {
+    margin: 0;
+    color: #fff;
+    font-size: var(--font-size-hero);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.rental-featured {
+    padding: clamp(3.5rem, 6vw, 6rem) 0;
+    background: #fff;
+}
+
+.rental-featured h2 {
+    margin: 0 0 clamp(2rem, 4vw, 3.5rem);
+    color: #111820;
+    font-size: clamp(2.25rem, 4vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.rental-featured__card {
+    align-items: stretch;
+}
+
+.rental-featured__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+}
+
+.rental-featured__column {
+    border: 1px solid #202020;
+}
+
+.rental-featured__content {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.5rem, 3vw, 3rem) clamp(1.75rem, 4vw, 4.5rem);
+}
+
+.rental-featured__logo {
+    width: min(170px, 42%);
+    height: auto;
+    align-self: flex-end;
+    margin-bottom: 0.75rem;
+}
+
+.rental-featured__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.rental-featured__status {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    color: #111;
+    background: #ff9d00;
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.04em;
+}
+
+.rental-featured__body h3 {
+    margin: 0 0 1rem;
+    color: #05080b;
+    font-size: clamp(1.8rem, 2.2vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.rental-featured__body p {
+    max-width: 640px;
+    margin: 0 0 2rem;
+    color: #111820;
+    font-size: clamp(0.9rem, 1.15vw, 1.05rem);
+    line-height: 1.4;
+}
+
+.rental-featured__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #111820;
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.rental-featured__link img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    transition: transform 180ms ease;
+}
+
+.rental-featured__link:hover img,
+.rental-featured__link:focus-visible img {
+    transform: translateX(4px);
+}
+
+.rental-catalog {
+    padding: clamp(3.5rem, 6vw, 6rem) 0;
+    background: #fff;
+}
+
+.rental-catalog__filters {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 2.25rem;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.rental-catalog__filters a {
+    padding: 0.65rem 0;
+    color: #111820;
+    text-decoration: none;
+}
+
+.rental-catalog__filters a.is-active {
+    padding-inline: 1.75rem;
+    background: #f49a00;
+    font-size: var(--font-size-md);
+    font-weight: 500;
+}
+
+.rental-catalog__products {
+    display: grid;
+    gap: 2.25rem;
+}
+
+.rental-product[hidden],
+.rental-pagination[hidden] {
+    display: none !important;
+}
+
+.rental-catalog__empty {
+    margin: 2rem 0 0;
+    padding: 1.25rem;
+    border: 1px solid #ff9d00;
+    color: #111820;
+    background: #fff8eb;
+    font-weight: 600;
+    text-align: center;
+}
+
+.rental-product {
+    min-height: 310px;
+    border: 1px solid #242424;
+}
+
+.rental-product__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 310px;
+    object-fit: cover;
+}
+
+.rental-product__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 2rem clamp(1.5rem, 3vw, 3rem);
+}
+
+.rental-product__logo {
+    width: 145px;
+    height: auto;
+    align-self: flex-end;
+    margin-bottom: 0.75rem;
+}
+
+.rental-product__status {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    padding: 0.22rem 0.75rem;
+    border-radius: 999px;
+    color: #111;
+    background: #ff9d00;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.rental-product h2 {
+    margin: 0 0 1rem;
+    color: #05080b;
+    font-size: clamp(1.45rem, 2vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.rental-product p {
+    margin: 0 0 1.5rem;
+    color: #111820;
+    font-size: var(--font-size-small);
+    line-height: 1.35;
+}
+
+.rental-product__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: auto;
+    align-self: flex-end;
+    color: #111820;
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.rental-product__link img {
+    width: 38px;
+    height: 38px;
+}
+
+.rental-pagination {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 2rem;
+}
+
+.rental-pagination a {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8d8d8d;
+    color: #111820;
+    background: #f7f7f7;
+    font-size: var(--font-size-base);
+    line-height: 1;
+    text-decoration: none;
+}
+
+.rental-pagination a.is-active {
+    border-color: #202020;
+    color: #ff9d00;
+    background: #202020;
+}
+
+.rental-pagination__arrow img {
+    display: block;
+    width: 18px;
+    height: auto;
+    object-fit: contain;
+}
+
+.rental-pagination a:hover,
+.rental-pagination a:focus-visible {
+    border-color: #ff9d00;
+    outline: none;
+}
+
+.rental-catalog__sidebar {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.rental-search {
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #242424;
+    border-radius: 999px;
+}
+
+.rental-search input {
+    min-width: 0;
+    flex: 1;
+    border: 0;
+    padding: 0.65rem 0.8rem;
+    font-size: var(--font-size-xs);
+    outline: 0;
+}
+
+.rental-search button {
+    flex: 0 0 auto;
+    border: 0;
+    padding: 0.25rem;
+    background: transparent;
+}
+
+.rental-search button img {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+.rental-sidebar-box {
+    border: 1px solid #242424;
+}
+
+.rental-sidebar-box h2 {
+    margin: 0;
+    padding: 1rem;
+    color: #ff9d00;
+    background: linear-gradient(108deg, #1f1f1f 0 52%, #565656 52% 67%, #929292 67% 100%);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+}
+
+.rental-sidebar-box__body {
+    padding: 1rem;
+}
+
+.rental-sidebar-box__body p {
+    margin: 0 0 0.75rem;
+    font-size: var(--font-size-xs);
+    line-height: 1.35;
+}
+
+.rental-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 0.45rem;
+}
+
+.rental-keywords a {
+    padding: 0.15rem 0.55rem;
+    border: 1px solid #242424;
+    border-radius: 999px;
+    color: #111820;
+    font-size: var(--font-size-xs);
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.rental-subscription {
+    display: flex;
+    border: 1px solid #242424;
+}
+
+.rental-subscription input {
+    min-width: 0;
+    flex: 1;
+    border: 0;
+    padding: 0.7rem 0.5rem;
+    font-size: var(--font-size-xs);
+    outline: 0;
+}
+
+.rental-subscription button {
+    border: 0;
+    padding: 0.5rem;
+    color: #ff9d00;
+    background: #111;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+    .rental-hero {
+        min-height: 420px;
+        align-items: flex-end;
+        padding-bottom: 2.5rem;
+        background-position: 62% center;
+    }
+
+    .rental-hero::before {
+        background: linear-gradient(0deg, rgba(5, 8, 11, 0.75) 0%, rgba(5, 8, 11, 0.08) 68%);
+    }
+
+    .rental-hero h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .rental-featured {
+        padding: 3rem 0;
+    }
+
+    .rental-featured h2 {
+        margin-bottom: 2rem;
+        font-size: var(--font-size-2xl);
+    }
+
+    .rental-featured__media img {
+        min-height: 0;
+        aspect-ratio: 1.57 / 1;
+    }
+
+    .rental-featured__content {
+        padding: 1.5rem;
+    }
+
+    .rental-featured__body h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    .rental-featured__body p {
+        font-size: var(--font-size-base);
+    }
+
+    .rental-catalog {
+        padding: 3rem 0;
+    }
+
+    .rental-catalog__filters {
+        flex-wrap: wrap;
+        margin-bottom: 1.75rem;
+        font-size: var(--font-size-small);
+    }
+
+    .rental-catalog__filters a.is-active {
+        padding-inline: 1.25rem;
+        font-size: var(--font-size-base);
+    }
+
+    .rental-product__media img {
+        min-height: 0;
+        aspect-ratio: 1.57 / 1;
+    }
+
+    .rental-product__content {
+        min-height: 330px;
+        padding: 1.5rem;
+    }
+
+    .rental-product h2 {
+        font-size: var(--font-size-large);
+    }
+
+    .rental-catalog__sidebar {
+        margin-top: 0.5rem;
+    }
+
+    .rental-pagination {
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .rental-pagination a {
+        width: 32px;
+        height: 32px;
+    }
+}

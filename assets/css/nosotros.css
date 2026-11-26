@@ -27,7 +27,7 @@
 .about-hero h1 {
     margin: 0;
     color: #fff;
-    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    font-size: var(--font-size-hero);
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
@@ -114,7 +114,7 @@
 
 .who-we-are__content p {
     margin: 0;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     line-height: 1.35;
     text-align: justify;
 }
@@ -142,7 +142,7 @@
 .what-we-offer__content h2 {
     margin: 0 0 1.75rem;
     color: #111;
-    font-size: clamp(1.65rem, 2.15vw, 2.25rem);
+    font-size: var(--font-size-about-heading);
     font-weight: 700;
     line-height: 1.1;
     text-transform: uppercase;
@@ -152,7 +152,7 @@
     max-width: 760px;
     margin: 0;
     color: #111;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     line-height: 1.4;
 }
 
@@ -220,7 +220,7 @@
 .service-quality__content h2 {
     margin: 0 0 1.75rem;
     color: #111;
-    font-size: clamp(1.65rem, 2.15vw, 2.25rem);
+    font-size: var(--font-size-about-heading);
     font-weight: 700;
     line-height: 1.1;
     text-transform: uppercase;
@@ -230,7 +230,7 @@
     max-width: 760px;
     margin: 0;
     color: #111;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     line-height: 1.4;
 }
 
@@ -257,7 +257,7 @@
 .future-ahead__content h2 {
     margin: 0 0 1.75rem;
     color: #111;
-    font-size: clamp(1.65rem, 2.15vw, 2.25rem);
+    font-size: var(--font-size-about-heading);
     font-weight: 700;
     line-height: 1.1;
     text-transform: uppercase;
@@ -267,7 +267,7 @@
     max-width: 780px;
     margin: 0;
     color: #111;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     line-height: 1.35;
     text-align: justify;
 }
@@ -301,7 +301,7 @@
     }
 
     .about-hero h1 {
-        font-size: 2.5rem;
+        font-size: var(--font-size-3xl);
     }
 
     .who-we-are {
@@ -328,11 +328,11 @@
 
     .who-we-are__content h2 {
         margin-bottom: 1rem;
-        font-size: 1.6rem;
+        font-size: var(--font-size-large);
     }
 
     .who-we-are__content p {
-        font-size: 1rem;
+        font-size: var(--font-size-base);
         line-height: 1.45;
         text-align: left;
     }
@@ -351,11 +351,11 @@
 
     .what-we-offer__content h2 {
         margin-bottom: 1.25rem;
-        font-size: 1.6rem;
+        font-size: var(--font-size-large);
     }
 
     .what-we-offer__content p {
-        font-size: 1rem;
+        font-size: var(--font-size-base);
         line-height: 1.45;
     }
 
@@ -383,11 +383,11 @@
 
     .service-quality__content h2 {
         margin-bottom: 1.25rem;
-        font-size: 1.6rem;
+        font-size: var(--font-size-large);
     }
 
     .service-quality__content p {
-        font-size: 1rem;
+        font-size: var(--font-size-base);
         line-height: 1.45;
     }
 
@@ -405,11 +405,11 @@
 
     .future-ahead__content h2 {
         margin-bottom: 1.25rem;
-        font-size: 1.6rem;
+        font-size: var(--font-size-large);
     }
 
     .future-ahead__content p {
-        font-size: 1rem;
+        font-size: var(--font-size-base);
         line-height: 1.45;
         text-align: left;
     }

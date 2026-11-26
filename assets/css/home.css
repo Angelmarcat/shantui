@@ -91,7 +91,7 @@
     align-items: baseline;
     border-bottom: 3px solid #ed6907;
     display: flex;
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     justify-content: space-between;
     line-height: 1.25;
     padding: 0.45rem 0.25rem 0.35rem;
@@ -143,7 +143,7 @@
 }
 
 .mining-truck__more-label {
-    font-size: 0.65rem;
+    font-size: var(--font-size-xs);
     font-weight: 700;
 }
 
@@ -177,7 +177,7 @@
 
 @media (max-width: 575.98px) {
     .mining-truck__specification {
-        font-size: 0.82rem;
+        font-size: var(--font-size-small);
     }
 }
 
@@ -187,6 +187,13 @@
     flex: 1 1 auto;
     padding-bottom: 3rem;
     padding-top: 3rem;
+}
+
+.hero-section__content h1 {
+    margin: 0;
+    font-size: clamp(1.55rem, 4vw, 4.5rem);
+    font-weight: var(--font-weight-black);
+    line-height: 1.08;
 }
 
 .hero-services {
@@ -253,7 +260,7 @@
     }
 
     .hero-services__link {
-        font-size: 0.68rem;
+        font-size: var(--font-size-xs);
         gap: 0.3rem;
     }
 
@@ -270,7 +277,7 @@
     }
 
     .hero-services__link {
-        font-size: 0.7rem;
+        font-size: var(--font-size-xs);
     }
 }
 
@@ -302,7 +309,7 @@
     }
 
     .hero-services__link {
-        font-size: 0.78rem;
+        font-size: var(--font-size-xs);
         min-height: 44px;
         white-space: normal;
     }
@@ -328,8 +335,8 @@
     color: #686868;
     display: flex;
     flex-direction: column;
-    font-size: 0.76rem;
-    font-weight: 600;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
     line-height: 1.1;
     text-align: center;
     width: 110px;
@@ -367,7 +374,7 @@
     }
 
     .product-categories__card {
-        font-size: 0.7rem;
+        font-size: var(--font-size-xs);
         width: 100%;
     }
 
@@ -400,7 +407,7 @@
 
 .construction-solutions__header p {
     color: #111;
-    font-size: 0.88rem;
+    font-size: var(--font-size-small);
     line-height: 1.45;
     margin: 0 auto;
     max-width: 1120px;
@@ -425,7 +432,7 @@
     border-left: 5px solid #ed6907;
     color: #111;
     display: flex;
-    font-size: 0.8rem;
+    font-size: var(--font-size-small);
     justify-content: space-between;
     min-height: 42px;
     padding: 0.25rem 0.75rem;
@@ -452,7 +459,7 @@
     align-items: center;
     color: #050505;
     display: inline-flex;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     gap: 1.25rem;
     text-decoration: none;
 }
@@ -480,11 +487,11 @@
     }
 
     .construction-solutions__header h2 {
-        font-size: 1.35rem;
+        font-size: var(--font-size-large);
     }
 
     .construction-solutions__header p {
-        font-size: 0.8rem;
+        font-size: var(--font-size-small);
     }
 
     .construction-solutions__columns {
@@ -497,7 +504,7 @@
     }
 
     .construction-solutions__item {
-        font-size: 0.78rem;
+        font-size: var(--font-size-xs);
         min-height: 44px;
     }
 
@@ -506,7 +513,7 @@
     }
 
     .construction-solutions__more {
-        font-size: 0.9rem;
+        font-size: var(--font-size-small);
         gap: 0.85rem;
     }
 
@@ -544,8 +551,8 @@
 }
 
 .about-shantui__description {
-    font-size: 0.87rem;
-    font-weight: 600;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
     line-height: 1.25;
     margin: 0;
     max-width: 560px;
@@ -573,7 +580,7 @@
 
 .about-shantui__stat span {
     display: block;
-    font-size: 0.83rem;
+    font-size: var(--font-size-small);
     font-weight: 600;
     line-height: 1.15;
     margin-top: 0.35rem;
@@ -583,7 +590,7 @@
     align-items: center;
     color: #fff;
     display: inline-flex;
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     gap: 0.85rem;
     margin-top: 2.4rem;
     text-decoration: none;
@@ -625,13 +632,13 @@
     }
 
     .about-shantui__content h2 {
-        font-size: 2rem;
+        font-size: var(--font-size-2xl);
         margin-bottom: 1.15rem;
         text-align: center;
     }
 
     .about-shantui__description {
-        font-size: 0.8rem;
+        font-size: var(--font-size-small);
         text-align: center;
     }
 
@@ -641,11 +648,11 @@
     }
 
     .about-shantui__stat strong {
-        font-size: 1.55rem;
+        font-size: var(--font-size-large);
     }
 
     .about-shantui__stat span {
-        font-size: 0.68rem;
+        font-size: var(--font-size-xs);
     }
 
     .about-shantui__more {

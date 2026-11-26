@@ -1,0 +1,381 @@
+.products-hero {
+    --hero-height: clamp(400px, 31.7vw, 614px);
+    --vehicle-overlap: clamp(70px, 6vw, 115px);
+    margin-bottom: calc(var(--vehicle-overlap) + 3rem);
+    background: #273337 url('../img/productos/Shantui-excavadora-banner.webp') center / cover no-repeat;
+}
+
+.products-hero__row {
+    min-height: var(--hero-height);
+}
+
+.products-hero__media {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    align-self: flex-end;
+    transform: translateY(var(--vehicle-overlap));
+}
+
+.products-hero h1 {
+    margin: 0;
+    color: #fff;
+    font-size: var(--font-size-hero);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.products-hero__media img {
+    display: block;
+    flex-shrink: 0;
+    width: min(1268px, 66.041667vw);
+    max-width: none;
+    height: auto;
+}
+
+@media (min-width: 1400px) {
+    .products-hero__media img {
+        transform: translateX(min(12%, calc((100vw - 1320px) / 2)));
+    }
+}
+
+.catalog-categories {
+    padding: 1.1rem 0 1.35rem;
+    background: #fff;
+}
+
+.catalog-categories__title {
+    margin: 0;
+    padding-bottom: 2.1rem;
+    color: #000;
+    font-size: clamp(1.125rem, 1.35vw, 1.5rem);
+    font-weight: var(--font-weight-black);
+    line-height: 1.2;
+}
+
+.catalog-categories__selector {
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr) 18px;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1.3rem 0;
+    border-top: 1px solid #8d8d8d;
+    border-bottom: 1px solid #8d8d8d;
+}
+
+.catalog-categories__arrow {
+    display: grid;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    border: 0;
+    place-items: center;
+    background: transparent;
+    cursor: pointer;
+}
+
+.catalog-categories__arrow:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.catalog-categories__arrow:focus-visible,
+.catalog-categories__grid:focus-visible {
+    outline: 2px solid #f56600;
+    outline-offset: 3px;
+}
+
+.catalog-categories__arrow img {
+    display: block;
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+.catalog-categories__grid {
+    margin-bottom: 0;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-inline: contain;
+}
+
+.catalog-categories__grid::-webkit-scrollbar {
+    display: none;
+}
+
+.catalog-categories__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 12.5%;
+    min-width: 0;
+    scroll-snap-align: start;
+    padding: 0 0.35rem;
+    color: #686868;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.catalog-categories__item img {
+    display: block;
+    width: 80px;
+    max-width: 100%;
+    height: 48px;
+    margin-bottom: 0.15rem;
+    object-fit: contain;
+    filter: brightness(0) opacity(0.55);
+}
+
+.catalog-categories__accent {
+    display: block;
+    width: 18px;
+    height: 3px;
+    margin-bottom: 0.35rem;
+    background: #f56600;
+}
+
+.product-filters {
+    padding: 1.5rem 0 3rem;
+    background: #fff;
+}
+
+.product-filters__panel {
+    border: 1px solid #222;
+    padding: 1.5rem;
+    color: #000;
+}
+
+.product-filters__panel h2 {
+    margin: 0 0 2rem;
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+}
+
+.product-filters__group {
+    margin: 0 0 2rem;
+    padding: 0;
+    border: 0;
+}
+
+.product-filters__group legend,
+.product-filters__heading {
+    margin: 0 0 0.7rem;
+    font-size: var(--font-size-base);
+    font-weight: 700;
+}
+
+.product-filters__group label {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.product-filters__group input {
+    accent-color: #f56600;
+}
+
+.product-filters__heading {
+    margin-bottom: 2rem;
+}
+
+.product-filters__reset {
+    width: 100%;
+    padding: 0.55rem 1rem;
+    border: 0;
+    background: #000;
+    color: #f56600;
+    font-weight: 700;
+}
+
+.product-filters__reset img {
+    width: 17px;
+    height: auto;
+    margin-left: 0.65rem;
+    vertical-align: middle;
+    filter: brightness(0) saturate(100%) invert(47%) sepia(94%) saturate(2700%) hue-rotate(1deg) brightness(102%) contrast(106%);
+}
+
+.product-card {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    min-height: 354px;
+    overflow: hidden;
+    border: 1px solid #222;
+    background: linear-gradient(115deg, #fff 0%, #fff 52%, #ffeadb 52%, #ffeadb 65%, #ffd5b9 65%, #ffd5b9 100%);
+    color: #000;
+}
+
+.product-card__content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem clamp(1.5rem, 4vw, 4rem);
+}
+
+.product-card__content h2 {
+    margin: 0 0 2.25rem;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-black);
+}
+
+.product-card__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.product-card__link:hover,
+.product-card__link:focus-visible {
+    color: #e65f00;
+    text-decoration: underline;
+}
+
+.product-card__content p {
+    margin: 0 0 0.5rem;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+}
+
+.product-card__content .product-card__description {
+    margin-bottom: 0.7rem;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+}
+
+.product-card__media {
+    align-self: end;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.product-card__media img {
+    display: block;
+    width: min(100%, 243px);
+    height: auto;
+}
+
+.product-filters__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.product-card[hidden] {
+    display: none;
+}
+
+.product-filters__results:empty {
+    display: none;
+}
+
+.product-card--wide-image {
+    grid-template-columns: 47% 53%;
+    background: linear-gradient(115deg, #fff 0%, #fff 79%, #ffeadb 79%, #ffeadb 93%, #ffd5b9 93%, #ffd5b9 100%);
+}
+
+.product-card--wide-image .product-card__media {
+    align-self: center;
+}
+
+.product-card--wide-image .product-card__media img {
+    width: 100%;
+    max-height: 330px;
+    object-fit: contain;
+}
+
+@media (max-width: 991.98px) {
+    .products-hero {
+        --hero-height: 420px;
+        --vehicle-overlap: 65px;
+        background-position: 62% center;
+    }
+
+    .products-hero__row {
+        row-gap: 2rem;
+    }
+
+    .products-hero__content {
+        padding-top: 3rem;
+    }
+
+    .products-hero__media {
+        justify-content: center;
+        max-width: 720px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .product-card {
+        grid-template-columns: minmax(0, 1fr) 38%;
+        min-height: 0;
+    }
+
+    .product-card__content {
+        padding: 1.5rem 0.5rem 1.5rem 1rem;
+    }
+
+    .product-card__content h2 {
+        margin-bottom: 1rem;
+        font-size: var(--font-size-large);
+    }
+
+    .product-card__content p {
+        font-size: var(--font-size-xs);
+        overflow-wrap: anywhere;
+    }
+
+    .product-card__content .product-card__description {
+        font-size: var(--font-size-small);
+    }
+
+    .catalog-categories {
+        padding: 1rem 0 1.25rem;
+    }
+
+    .catalog-categories__title {
+        padding-bottom: 1.25rem;
+        font-size: var(--font-size-base);
+    }
+
+    .catalog-categories__selector {
+        grid-template-columns: 14px minmax(0, 1fr) 14px;
+        gap: 0.25rem;
+        padding: 0.85rem 0;
+    }
+
+    .catalog-categories__arrow,
+    .catalog-categories__arrow img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .catalog-categories__item {
+        flex-basis: 33.333333%;
+        padding: 0 0.125rem;
+        font-size: var(--font-size-xs);
+    }
+
+    .catalog-categories__item img {
+        width: 64px;
+        height: 42px;
+    }
+
+    .products-hero {
+        --hero-height: 340px;
+        --vehicle-overlap: 50px;
+    }
+
+    .products-hero h1 {
+        font-size: var(--font-size-3xl);
+    }
+}

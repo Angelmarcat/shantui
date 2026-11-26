@@ -5,12 +5,8 @@ module.exports = {
     open: false,
     ui: false,
     injectChanges: true,
-    script: {
-        domain: process.env.NGROK_URL,
-    },
-    socket: {
-        domain: process.env.NGROK_URL,
-    },
+    notify: false,
+    online: false,
     files: [
         '**/*.php',
         '**/*.css',
